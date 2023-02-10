@@ -11,13 +11,13 @@ TODO:
 - [ ] Banner/Logo
 - [ ] Screenshot of example `Unnested` for `pubspec.yaml`
 - [ ] Dependabot
-- [ ] CI tests, followed by CD release on push to main
-- [ ] Conventional commits/melos' automatic release?
+- [ ] CI tests
+- [ ] Conventional commits and automatic release, with current GitHub Actions workflow?
 - [ ] Basic implementation based on current macro API
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
-- 🤝 Effectively divides state management logic from stateless UI code
+- 🤝 Effectively divides state management logic and stateless UI code
 - 😌 Super simple: concept and initial prototype created in a single day!
 
 ## Getting Started
