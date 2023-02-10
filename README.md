@@ -14,6 +14,7 @@ TODO:
 - [ ] CI tests
 - [ ] Conventional commits and automatic release, with current GitHub Actions workflow?
 - [ ] Basic implementation based on current macro API
+- [ ] Example app
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
