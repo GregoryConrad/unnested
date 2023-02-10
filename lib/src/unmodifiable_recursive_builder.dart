@@ -27,7 +27,7 @@ typedef _WithChildWidgetBuilder = Widget Function(Widget child);
 Widget _initialWithChildWidgetBuilder(Widget child) => child;
 
 /// Builds arbitrarily nested widgets via a simple method chaining API.
-/// 
+///
 /// Utilizes an unmodifiable (copy only), recursive, and eager build strategy.
 /// Incurs some extra memory and performance overhead,
 /// but it is the cleanest and most predictable builder implementation.
