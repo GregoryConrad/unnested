@@ -79,7 +79,8 @@ Widget build(context) => Unnested()
 // Widgets with named constructors (e.g., SizedBox.shrink())
 Widget build(context) => Unnested()
     .someWidget()
-    .sizedBox_shrink(); // just use an underscore!
+    .sizedBox_shrink() // just use an underscore!
+    .end();
 ```
 
 ### Step 4: Going Beyond
