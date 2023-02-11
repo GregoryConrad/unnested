@@ -1,0 +1,23 @@
+name: unnested
+repository: https://github.com/GregoryConrad/unnested
+
+packages:
+  - /
+  - /example
+
+scripts:
+  analyze:
+    exec: dart analyze .
+    description: Analyze a specific package in this project.
+
+  check-format:
+    exec: dart format --set-exit-if-changed .
+    description: Check the format of a specific package in this project.
+
+  format:
+    exec: dart format .
+    description: Format a specific package in this project.
+
+  test:
+    run: flutter test test
+    description: Run all Dart & Flutter tests in this project.
