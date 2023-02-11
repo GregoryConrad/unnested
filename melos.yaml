@@ -2,8 +2,7 @@ name: unnested
 repository: https://github.com/GregoryConrad/unnested
 
 packages:
-  - /
-  - /example
+  - '**'
 
 scripts:
   analyze:
