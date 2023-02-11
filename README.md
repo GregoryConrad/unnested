@@ -1,5 +1,13 @@
+<p align="center">
+<a href="https://github.com/GregoryConrad/unnested/actions"><img src="https://github.com/GregoryConrad/unnested/actions/workflows/test.yml/badge.svg" alt="CI Status"></a>
+<a href="https://github.com/GregoryConrad/unnested"><img src="https://img.shields.io/github/stars/GregoryConrad/unnested.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Github Stars"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License"></a>
+</p>
+
 The easy way to unnest even the most complicated of widget trees,
 based on the power of macros in Dart 3.
+
+---
 
 # IMPORTANT
 This library is just a placeholder for now with some prototype code.
@@ -7,14 +15,11 @@ Dart 3 and macros have not been released yet.
 
 TODO:
 
-- [ ] CI badges
 - [ ] Banner/Logo
 - [ ] Screenshot of example `Unnested` for `pubspec.yaml`
-- [ ] Dependabot
-- [ ] CI tests
-- [ ] Conventional commits and automatic release, with current GitHub Actions workflow?
 - [ ] Basic implementation based on current macro API
 - [ ] Example app
+- [ ] Evaluate whether we should look for other parameter names other than child (like "content", or "label")
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
@@ -42,9 +47,9 @@ class Unnested {}
 ### Step 3: Use Unnested
 Finally, using Unnested is as simple as:
 
+#### Stateless Widgets
 ```dart
-// Stateless widgets
-Widget build(context) => Unnested()
+Widget build(BuildContext context) => Unnested()
     .container(
       width: 40,
       height: 40,
@@ -52,32 +57,48 @@ Widget build(context) => Unnested()
     )
     .center()
     .text('Hello World!');
+```
 
-// Stateful widgets
-Widget build(context) {
+#### Stateful Widgets
+```dart
+Widget build(BuildContext context) {
   final count = useState(0); // example with flutter_hooks
 
   return Unnested()
       .padding(padding: const EdgeInsets.all(8))
       .text(count.value.toString());
 }
+```
 
-// Widget trees ending in a Widget that can consume a child
-Widget build(context) => Unnested()
-    .sizedBox(
+#### When the Last Widget Consumes a `child`
+```dart
+Widget build(BuildContext context) => Unnested()
+    .sizedBox( // SizedBox() has a "child" parameter
       width: 40,
       height: 40,
     )
-    .end(); // use .end() to finish building when needed
+    .end(); // .end() finishes the build when the last widget has a child parameter
+```
 
-// Custom widgets (must be included in your unnested_config.dart)
-Widget build(context) => Unnested()
+#### Including Custom Widgets
+In your Unnested configuration file:
+```dart
+// ...
+import 'package:my_app/my_custom_widget.dart';
+// ...
+```
+
+In your other files:
+```dart
+Widget build(BuildContext context) => Unnested()
     .center()
     .myCustomWidget(foo: bar)
     .someOtherCustomWidget();
+```
 
-// Widgets with named constructors (e.g., SizedBox.shrink())
-Widget build(context) => Unnested()
+#### Widgets With Named Constructors (e.g., `SizedBox.shrink()`)
+```dart
+Widget build(BuildContext context) => Unnested()
     .someWidget()
     .sizedBox_shrink() // just use an underscore!
     .end();
