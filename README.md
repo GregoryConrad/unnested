@@ -19,7 +19,9 @@ TODO:
 - [ ] Screenshot of example `Unnested` for `pubspec.yaml`
 - [ ] Basic implementation based on current macro API
 - [ ] Example app
+- [ ] Proper tests
 - [ ] Evaluate whether we should look for other parameter names other than child (like "content", or "label")
+- [ ] Update Dart & Flutter versions when Dart 3 comes out
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
@@ -41,7 +43,7 @@ import 'package:my_app/my_custom_widget.dart';
 // other widget imports...
 
 @unnested
-class Unnested {}
+class Unnest {}
 ```
 
 ### Step 3: Use Unnested
@@ -49,7 +51,7 @@ Finally, using Unnested is as simple as:
 
 #### Stateless Widgets
 ```dart
-Widget build(BuildContext context) => Unnested()
+Widget build(BuildContext context) => Unnest()
     .container(
       width: 40,
       height: 40,
@@ -64,7 +66,7 @@ Widget build(BuildContext context) => Unnested()
 Widget build(BuildContext context) {
   final count = useState(0); // example with flutter_hooks
 
-  return Unnested()
+  return Unnest()
       .padding(padding: const EdgeInsets.all(8))
       .text(count.value.toString());
 }
@@ -72,7 +74,7 @@ Widget build(BuildContext context) {
 
 #### When the Last Widget Consumes a `child`
 ```dart
-Widget build(BuildContext context) => Unnested()
+Widget build(BuildContext context) => Unnest()
     .sizedBox( // SizedBox() has a "child" parameter
       width: 40,
       height: 40,
@@ -90,7 +92,7 @@ import 'package:my_app/my_custom_widget.dart';
 
 In your other files:
 ```dart
-Widget build(BuildContext context) => Unnested()
+Widget build(BuildContext context) => Unnest()
     .center()
     .myCustomWidget(foo: bar)
     .someOtherCustomWidget();
@@ -98,7 +100,7 @@ Widget build(BuildContext context) => Unnested()
 
 #### Widgets With Named Constructors (e.g., `SizedBox.shrink()`)
 ```dart
-Widget build(BuildContext context) => Unnested()
+Widget build(BuildContext context) => Unnest()
     .someWidget()
     .sizedBox_shrink() // just use an underscore!
     .end();

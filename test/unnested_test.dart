@@ -2,12 +2,15 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:unnested/unnested.dart';
 
+class Unnest extends UnmodifiableRecursiveBuilder {}
+
 void main() {
+  // TODO add some tests that use custom test widgets that override ==
   test('Dummy test', () {
     expect(true, true);
 
     // ignore: unused_local_variable
-    final foo = Unnested()
+    final foo = Unnest()
         .container(
           color: const Color(0xFFFF0000),
         )
@@ -27,7 +30,7 @@ void main() {
         .end();
 
     // ignore: unused_local_variable
-    final bar = Unnested()
+    final bar = Unnest()
         .container(
           color: const Color(0xFFFF0000),
         )
