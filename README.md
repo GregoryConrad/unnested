@@ -19,11 +19,6 @@ Dart 3 and macros have not been released yet.
 
 There are still a few in-code TODOs that need to be worked out.
 
-TODO:
-
-- [ ] Banner/Logo
-- [ ] Screenshot of example `Unnested` for `pubspec.yaml`
-
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
 - 🤝 Effectively divides state management logic and stateless UI code
