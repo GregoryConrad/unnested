@@ -77,7 +77,8 @@ export 'src/macro.dart';
 
 // TODO delete rest of this file
 
-import 'package:flutter/widgets.dart';
+// We will only depend on flutter/widgets.dart in actual macro:
+import 'package:flutter/material.dart';
 
 // ignore_for_file: camel_case_types
 // ignore_for_file: non_constant_identifier_names
@@ -129,6 +130,34 @@ class UnmodifiableRecursiveBuilder {
         child: child,
       )),
     );
+  }
+
+  /// See [Center].
+  UnmodifiableRecursiveBuilder center() {
+    return UnmodifiableRecursiveBuilder._(
+      (child) => _widgetBuilder(Center(
+        child: child,
+      )),
+    );
+  }
+
+  /// See [Scaffold].
+  UnmodifiableRecursiveBuilder scaffold({
+    PreferredSizeWidget? appBar,
+    Widget? floatingActionButton,
+  }) {
+    return UnmodifiableRecursiveBuilder._(
+      (child) => _widgetBuilder(Scaffold(
+        appBar: appBar,
+        floatingActionButton: floatingActionButton,
+        body: child,
+      )),
+    );
+  }
+
+  /// See [Text].
+  Widget text(String text, {TextStyle? style}) {
+    return _widgetBuilder(Text(text, style: style));
   }
 
   /// See [SizedBox].

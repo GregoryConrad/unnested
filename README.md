@@ -18,9 +18,8 @@ TODO:
 - [ ] Banner/Logo
 - [ ] Screenshot of example `Unnested` for `pubspec.yaml`
 - [ ] Basic implementation based on current macro API
-- [ ] Example app
 - [ ] Proper tests
-- [ ] Evaluate whether we should look for other parameter names other than child (like "content", or "label")
+- [ ] Evaluate whether we should look for other parameter names other than child (like "body", "content", and "label")
 - [ ] Update Dart & Flutter versions when Dart 3 comes out
 
 ## Features
