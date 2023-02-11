@@ -110,5 +110,10 @@ Here are some helpful hints to make working with Unnested easier.
 
 - Create a `widgets` Flutter package and use a monorepo tool like [Melos](https://melos.invertase.dev)
   - Helps split up your code in a logical way too!
+- When using Unnested to create stateless widgets, using the `=>` syntax
+for `build` functions helps reduce code whitespace/padding near the start of the line
+- It is not always a good idea to use Unnested everywhere in your project!
+  - For simple widgets, ideally with 2 or less levels of depth, it is often more readable to write out the widgets normally
+  - See the example application for more details
 - Unnested plays very nicely with `riverpod` and `flutter_hooks` for state management;
 take a look at both of these amazing projects!
