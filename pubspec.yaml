@@ -5,10 +5,10 @@ description: >
 homepage: https://github.com/GregoryConrad/unnested
 repository: https://github.com/GregoryConrad/unnested
 issue_tracker: https://github.com/GregoryConrad/unnested/issues
-# screenshots:
-#   - description: 'This screenshot shows a stack trace returning a human-readable
-#   representation.'
-#     path: path/to/image/in/package.png
+screenshots:
+  - path: assets/banner.png
+    description: >
+      This screenshot shows the before and after of using Unnested.
 
 # TODO update for Dart 3 and future Flutter version
 environment:

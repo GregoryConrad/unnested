@@ -4,6 +4,10 @@
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="MIT License"></a>
 </p>
 
+<p align="center">
+<img src="https://github.com/GregoryConrad/unnested/blob/main/assets/banner.png?raw=true" width="100%" alt="Unnested Banner" />
+</p>
+
 The easy way to unnest even the most complicated of widget trees,
 based on the power of macros in Dart 3.
 
