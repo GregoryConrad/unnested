@@ -17,7 +17,7 @@ based on the power of macros in Dart 3.
 This library is just a placeholder for now with some prototype code.
 Dart 3 and macros have not been released yet.
 
-There are still a few in-code TODOs that need to be worked out.
+Also, there are still a few in-code TODOs that need to be worked out.
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
@@ -81,7 +81,6 @@ Widget build(BuildContext context) => Unnest()
 #### Including Custom Widgets
 In your Unnested configuration file:
 ```dart
-// ...
 import 'package:my_app/my_custom_widget.dart';
 // ...
 ```

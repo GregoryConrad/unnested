@@ -49,7 +49,6 @@
 /// #### Including Custom Widgets
 /// In your Unnest configuration file:
 /// ```dart
-/// // ...
 /// import 'package:my_app/my_custom_widget.dart';
 /// // ...
 /// ```
