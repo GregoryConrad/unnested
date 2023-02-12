@@ -10,7 +10,6 @@ const _childNames = [
   'child',
   'body',
   'content',
-  'label',
 ];
 
 class Unnested extends Macro {
