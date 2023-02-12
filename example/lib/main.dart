@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unnested/unnested.dart';
 
-class Unnest extends UnmodifiableRecursiveBuilder {} // FIXME
+class Unnest extends UnmodifiableRecursiveBuilder {}
 
 void main() {
   runApp(MaterialApp(
