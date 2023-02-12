@@ -1,5 +1,5 @@
 name: unnested
-version: 1.0.0-dev.1
+version: 1.0.0-dev.2
 description: >
   The easy way to unnest even the most complicated of widget trees.
 homepage: https://github.com/GregoryConrad/unnested

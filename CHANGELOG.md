@@ -1,3 +1,7 @@
+## 1.0.0-dev.2
+
+ - **DOCS**: update some examples and wording.
+
 ## 1.0.0-dev.1
 
  - **REFACTOR**: moved UnmodifiableRecursiveBuilder.
