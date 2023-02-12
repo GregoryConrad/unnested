@@ -82,7 +82,7 @@ Widget build(BuildContext context) => Unnest()
 In your Unnested configuration file:
 ```dart
 import 'package:my_app/my_custom_widget.dart';
-// ...
+// other widget imports...
 ```
 
 In your other files:
