@@ -1,3 +1,7 @@
+## 1.0.0-dev.4
+
+ - **FIX**: fix code analysis.
+
 ## 1.0.0-dev.3
 
  - **DOCS**: make code comment consistent.
