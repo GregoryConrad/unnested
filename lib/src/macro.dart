@@ -29,8 +29,8 @@ class Unnested implements ClassTypesMacro, ClassDeclarationsMacro {
 // TODO create a method for each Widget constructor
 
 // TODO if we need to use a library/import macro, consider letting users
-//  not define a class at all, because we can generate the class if not present
-//  in each library macro already.
+//  not define an Unnest class at all, because we can generate the class if not
+//  already generated in the individual library macro(s) themselves.
 
   @override
   void buildTypesForClass(ClassDeclaration clazz, TypeBuilder builder) {
