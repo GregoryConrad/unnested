@@ -118,7 +118,7 @@ abstract class TypeAnnotationCode implements Code, TypeAnnotation {
   ///
   /// Returns the current instance if it is already nullable.
   NullableTypeAnnotationCode get asNullable =>
-      new NullableTypeAnnotationCode(this);
+      NullableTypeAnnotationCode(this);
 
   /// Whether or not this type is nullable.
   @override

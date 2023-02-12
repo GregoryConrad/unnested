@@ -4,6 +4,8 @@ import 'package:unnested/macro_api/api.dart';
 // support more types of Widgets (like Scaffold, AlertDialog, etc.).
 // Names are in order of precedence, i.e. the macro looks for
 // "child" before "body", "body" before "content", etc.
+// TODO remove the below lint ignore
+// ignore: unused_element
 const _childNames = [
   'child',
   'body',
