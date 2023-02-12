@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  unnested: ^1.0.0-dev.2
+  unnested: ^1.0.0-dev.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

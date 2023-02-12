@@ -1,3 +1,7 @@
+## 1.0.0-dev.3
+
+ - **DOCS**: make code comment consistent.
+
 ## 1.0.0-dev.2
 
  - **DOCS**: update some examples and wording.
