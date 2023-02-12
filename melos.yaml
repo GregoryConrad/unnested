@@ -6,7 +6,7 @@ packages:
 
 scripts:
   analyze:
-    exec: dart analyze .
+    exec: dart analyze . --fatal-infos
     description: Analyze a specific package in this project.
 
   check-format:
