@@ -34,12 +34,14 @@ Next, create an `unnested_config.dart` somewhere in your project
 (exact filename/location do not matter):
 
 ```dart
-import 'package:flutter/material.dart';
-import 'package:my_app/my_custom_widget.dart';
-// other widget imports...
-
 @unnested
-class Unnest {}
+import 'package:flutter/material.dart';
+@unnested
+import 'package:my_app/my_custom_widget.dart';
+// other Widget imports with @unnested...
+
+// The @unnested macros above will construct an Unnest class for you
+// that you can then import in your other UI files.
 ```
 
 ### Step 3: Use Unnested
@@ -68,16 +70,6 @@ Widget build(BuildContext context) {
 }
 ```
 
-#### When the Last Widget Consumes a `child`
-```dart
-Widget build(BuildContext context) => Unnest()
-    .sizedBox( // SizedBox() has a "child" parameter
-      width: 40,
-      height: 40,
-    )
-    .end(); // .end() finishes the build when the last widget has a child parameter
-```
-
 #### Including Custom Widgets
 In your Unnested configuration file:
 ```dart
@@ -97,8 +89,26 @@ Widget build(BuildContext context) => Unnest()
 ```dart
 Widget build(BuildContext context) => Unnest()
     .someWidget()
-    .sizedBox_shrink() // just use an underscore!
+    .sizedBox_shrink() // just use an underscore
     .end();
+```
+
+#### When the Last Widget Consumes a `child`
+```dart
+Widget build(BuildContext context) => Unnest()
+    .container( // Container() has a "child" parameter
+      color: Colors.red,
+      width: 40,
+      height: 40,
+    )
+    .end(); // finishes the build when the previous Widget consumes a child
+```
+
+#### Creating Reusable Widgets
+```dart
+Widget build(BuildContext context) => Unnest()
+    .center()
+    .end(child); // you can end() with a child Widget
 ```
 
 ### Step 4: Going Beyond

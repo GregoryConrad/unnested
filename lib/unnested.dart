@@ -1,5 +1,7 @@
 /// The easy way to unnest even the most complicated of widget trees.
 ///
+/// TODO update the below based on the README
+///
 /// To start, you need to create an Unnested configuration file,
 /// such as unnested_config.dart (name and location do not matter):
 /// ```dart
