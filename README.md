@@ -73,24 +73,23 @@ Widget build(BuildContext context) {
 #### Including Custom Widgets
 In your Unnested configuration file:
 ```dart
+@unnested
 import 'package:my_app/my_custom_widget.dart';
-// other widget imports...
+// other Widget imports with @unnested...
 ```
 
 In your other files:
 ```dart
 Widget build(BuildContext context) => Unnest()
     .center()
-    .myCustomWidget(foo: bar)
-    .someOtherCustomWidget();
+    .myCustomWidget(foo: bar);
 ```
 
 #### Widgets With Named Constructors (e.g., `SizedBox.shrink()`)
 ```dart
 Widget build(BuildContext context) => Unnest()
-    .someWidget()
     .sizedBox_shrink() // just use an underscore
-    .end();
+    .someOtherWidget();
 ```
 
 #### When the Last Widget Consumes a `child`
