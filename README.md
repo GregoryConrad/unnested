@@ -21,8 +21,9 @@ Also, there are still a few in-code TODOs that need to be worked out.
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
-- 🤝 Effectively divides state management logic and stateless UI code
+- 🤲 Effectively divides state management logic and stateless UI code
 - 😌 Super simple: concept and initial prototype created in a single day!
+- 🤝 Works well with your choice of state management solution
 
 ## Getting Started
 
@@ -61,13 +62,12 @@ Widget build(BuildContext context) => Unnest()
 
 #### Stateful Widgets
 ```dart
-Widget build(BuildContext context) {
-  final count = useState(0); // example with flutter_hooks
-
-  return Unnest()
+// This example uses Unstate, a modern state management solution
+// built around Dart 3! After you're done here, go check it out!
+@unstateWidget
+Widget _countDisplay(BuildContext context, Count count) => Unnest()
       .padding(padding: const EdgeInsets.all(8))
-      .text(count.value.toString());
-}
+      .text('$count');
 ```
 
 #### Including Custom Widgets
@@ -113,6 +113,7 @@ Widget build(BuildContext context) => Unnest()
 ### Step 4: Going Beyond
 Here are some helpful hints to make working with Unnested easier.
 
+- Unnested plays very nicely with `Unstate` for state management, as they are sister projects
 - Create a `widgets` Flutter package and use a monorepo tool like [Melos](https://melos.invertase.dev)
   - Helps split up your code in a logical way too!
 - When using Unnested to create stateless widgets, using the `=>` syntax
@@ -120,5 +121,3 @@ for `build` functions helps reduce code whitespace/padding near the start of the
 - It is not always a good idea to use Unnested everywhere in your project!
   - For simple widgets, ideally with 2 or less levels of depth, it is often more readable to write out the widgets normally
   - See the example application for more details
-- Unnested plays very nicely with `riverpod` and `flutter_hooks` for state management;
-take a look at both of these amazing projects!
