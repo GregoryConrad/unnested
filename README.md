@@ -65,9 +65,9 @@ Widget build(BuildContext context) => Unnest()
 // This example uses Unstate, a modern state management solution
 // built around Dart 3! After you're done here, go check it out!
 @unstateWidget
-Widget _countDisplay(BuildContext context, Count count) => Unnest()
-      .padding(padding: const EdgeInsets.all(8))
-      .text('$count');
+Widget _countDisplay(@C(countCapsule) int count) => Unnest()
+    .padding(padding: const EdgeInsets.all(8))
+    .text('$count'); // simply reference your state variables
 ```
 
 #### Including Custom Widgets
