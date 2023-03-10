@@ -1,13 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:unnested/macro_api/api.dart';
 
+// FIXME remove this lint ignore
+// ignore_for_file: public_member_api_docs
+
 const unnested = Unnested();
 
 /// Names commonly used for the "child" parameter, so that the macro can
 /// support more types of Widgets (like Scaffold, AlertDialog, etc.).
 /// Names are in order of precedence, i.e. the macro looks for
 /// "child" before "body", "body" before "content", etc.
-// TODO remove the below lint ignore
+// FIXME remove the below lint ignore
 // ignore: unused_element
 const _childNames = [
   'child',
@@ -21,31 +24,34 @@ const _widgetBuilderName = '_widgetBuilder';
 const _endFnName = 'end';
 
 /// The Unnested macro which generates Unnested [Widget] builders.
-/// TODO basic usage example.
+/// FIXME basic usage example.
 class Unnested implements ClassTypesMacro, ClassDeclarationsMacro {
   const Unnested();
 
-// TODO import flutter/widgets.dart, so we can use Widget and SizedBox.shrink?
-// TODO create a method for each Widget constructor
+// FIXME import flutter/widgets.dart, so we can use Widget and SizedBox.shrink?
+// FIXME create a method for each Widget constructor
 
-// TODO if we need to use a library/import macro, consider letting users
+// FIXME if we need to use a library/import macro, consider letting users
 //  not define an Unnest class at all, because we can generate the class if not
 //  already generated in the individual library macro(s) themselves.
 
   @override
   void buildTypesForClass(ClassDeclaration clazz, TypeBuilder builder) {
     builder.declareType(
-        _withChildWidgetBuilderName, DeclarationCode.fromString('''
+      _withChildWidgetBuilderName,
+      DeclarationCode.fromString('''
 /// Defines what a [Widget] builder in Unnested should look like.
 /// Essentially represents a list of composable widgets, but as a function.
 /// Starts off as the identity function, [$_initialWithChildWidgetBuilderName],
 /// and then more and more children are added in incrementally, recursively.
 /// Each method chain just adds in a new nested child into a growing function.
 typedef $_withChildWidgetBuilderName = Widget Function(Widget child);
-'''));
+'''),
+    );
 
     builder.declareType(
-        _initialWithChildWidgetBuilderName, DeclarationCode.fromString('''
+      _initialWithChildWidgetBuilderName,
+      DeclarationCode.fromString('''
 /// The [$_withChildWidgetBuilderName] base case & identity function.
 ///
 /// Simply returns the same widget it was given to start the recursion.
@@ -55,7 +61,8 @@ typedef $_withChildWidgetBuilderName = Widget Function(Widget child);
 /// Defined as a top level function since const lambdas are not yet supported.
 /// See here: https://github.com/dart-lang/language/issues/1048.
 Widget $_initialWithChildWidgetBuilderName(Widget child) => child;
-'''));
+'''),
+    );
   }
 
   @override
@@ -65,28 +72,36 @@ Widget $_initialWithChildWidgetBuilderName(Widget child) => child;
   ) {
     final className = clazz.identifier.name;
 
-    builder.declareInClass(DeclarationCode.fromString('''
+    builder.declareInClass(
+      DeclarationCode.fromString('''
 /// Constructs an Unnested builder that can create nested [Widget]s.
 const $className()
     : $_widgetBuilderName = $_initialWithChildWidgetBuilderName;
-'''));
+'''),
+    );
 
-    builder.declareInClass(DeclarationCode.fromString(
-      'const $className._(this.$_widgetBuilderName);',
-    ));
+    builder.declareInClass(
+      DeclarationCode.fromString(
+        'const $className._(this.$_widgetBuilderName);',
+      ),
+    );
 
-    builder.declareInClass(DeclarationCode.fromString(
-      'final $_withChildWidgetBuilderName $_widgetBuilderName;',
-    ));
+    builder.declareInClass(
+      DeclarationCode.fromString(
+        'final $_withChildWidgetBuilderName $_widgetBuilderName;',
+      ),
+    );
 
-    builder.declareInClass(DeclarationCode.fromString('''
+    builder.declareInClass(
+      DeclarationCode.fromString('''
 /// Terminates an Unnested method chain and returns the constructed widget.
 /// Implemented internally by adding a [SizedBox.shrink] as the final child
 /// if the supplied [child] is null.
 Widget $_endFnName([Widget? child]) {
   return _widgetBuilder(child ?? const SizedBox.shrink());
 }
-'''));
+'''),
+    );
   }
 }
 
