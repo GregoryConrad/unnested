@@ -6,6 +6,10 @@ updates:
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/example"
+    directory: "/packages/unnested"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/unnested/example"
     schedule:
       interval: weekly
