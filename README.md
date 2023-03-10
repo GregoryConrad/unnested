@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/GregoryConrad/unnested/blob/main/assets/banner.png?raw=true" width="100%" alt="Unnested Banner" />
+<img src="https://github.com/GregoryConrad/unnested/blob/main/packages/unnested/assets/banner.png?raw=true" width="100%" alt="Unnested Banner" />
 </p>
 
 The easy way to unnest even the most complicated of widget trees,

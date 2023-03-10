@@ -4,12 +4,13 @@ description: Example project using Unnested.
 publish_to: none
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: ">=2.19.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   unnested: ^1.0.0-dev.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

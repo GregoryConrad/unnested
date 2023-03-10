@@ -2,7 +2,7 @@ name: unnested
 repository: https://github.com/GregoryConrad/unnested
 
 packages:
-  - '**'
+  - 'packages/**'
 
 scripts:
   analyze:
@@ -19,4 +19,4 @@ scripts:
 
   test:
     run: flutter test test
-    description: Run all Dart & Flutter tests in this project.
+    description: Run all Flutter tests in this project.
