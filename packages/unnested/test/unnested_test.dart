@@ -18,11 +18,11 @@ void main() {
       ),
     );
 
-    expect(expected.isEqualTo(expected), equals(true)); // TODO delete this
+    expect(expected.isEqualTo(expected), equals(true)); // FIXME delete this
 
     // final actual = Unnest()
-    //     .multiConstructorTestWidget('0', 1, 2, 3)
-    //     .multiConstructorTestWidget_namedWithNamedParameters('10', field3: 13);
+    //   .multiConstructorTestWidget('0', 1, 2, 3)
+    //   .multiConstructorTestWidget_namedWithNamedParameters('10', field3: 13);
 
     // expect(expected.isEqualTo(actual), equals(true));
   });
@@ -41,7 +41,7 @@ void main() {
       ),
     );
 
-    expect(expected.isEqualTo(expected), equals(true)); // TODO delete this
+    expect(expected.isEqualTo(expected), equals(true)); // FIXME delete this
 
     // final actual = Unnest()
     //     .multiConstructorTestWidget('0', 1, 2, 3)
@@ -55,7 +55,7 @@ void main() {
     // expect(expected.isEqualTo(actual), equals(true));
   });
 
-  // TODO uncomment
+  // FIXME uncomment
   // test('"child" parameter order precedence', () {
   //   // for reference: child > body > content
 

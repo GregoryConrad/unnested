@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:unnested/unnested.dart';
 
+// ignore_for_file: public_member_api_docs
+
 class Unnest extends UnmodifiableRecursiveBuilder {}
 
 void main() {
-  runApp(MaterialApp(
-    title: 'Unnested Demo',
-    home: HomePage(),
-  ));
+  runApp(
+    const MaterialApp(
+      title: 'Unnested Demo',
+      home: HomePage(),
+    ),
+  );
 }
 
 class HomePage extends StatefulWidget {
@@ -33,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         // That's the case here, where we introduce just 1 extra level of depth.
         // Consider using Unnest() only when you have 2+ levels of depth.
         // You can always still use regular widgets at your discretion!
-        appBar: AppBar(title: Text('Unnested Demo')),
+        appBar: AppBar(title: const Text('Unnested Demo')),
         floatingActionButton: FloatingActionButton(
           onPressed: _incrementCounter,
           tooltip: 'Increment',

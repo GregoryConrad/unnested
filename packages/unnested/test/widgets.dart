@@ -19,13 +19,18 @@ enum ConstructorUsed {
 
 class MultiConstructorTestWidget extends _BaseTestWidget {
   const MultiConstructorTestWidget(
-      this.field0, this.field1, this.field2, this.field3, this.child,
-      {super.key})
-      : constructorUsed = ConstructorUsed.unnamed;
+    this.field0,
+    this.field1,
+    this.field2,
+    this.field3,
+    this.child, {
+    super.key,
+  }) : constructorUsed = ConstructorUsed.unnamed;
   const MultiConstructorTestWidget.namedWithNamedParameters(
     this.field0, {
     this.field1,
     this.field2 = 2,
+    // ignore: always_put_required_named_parameters_first
     required this.field3,
     super.key,
   })  : constructorUsed = ConstructorUsed.namedWithNamedParameters,
@@ -66,5 +71,6 @@ class MultiChildNameTestWidget extends _BaseTestWidget {
   })  : child = null,
         body = null;
 
+  // ignore: avoid_multiple_declarations_per_line
   final Widget? child, body, content;
 }

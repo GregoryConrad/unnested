@@ -1,82 +1,9 @@
-/// The easy way to unnest even the most complicated of widget trees.
-///
-/// TODO update the below based on the README
-///
-/// To start, you need to create an Unnested configuration file,
-/// such as unnested_config.dart (name and location do not matter):
-/// ```dart
-/// import 'package:flutter/material.dart';
-/// import 'package:my_app/my_custom_widget.dart';
-/// // other widget imports...
-///
-/// @unnested
-/// class Unnest {}
-/// ```
-///
-/// Next, you can simply use unnested!
-///
-/// #### Stateless Widgets
-/// ```dart
-/// Widget build(BuildContext context) => Unnest()
-///     .container(
-///       width: 40,
-///       height: 40,
-///       color: Colors.yellow,
-///     )
-///     .center()
-///     .text('Hello World!');
-/// ```
-///
-/// #### Stateful Widgets
-/// ```dart
-/// Widget build(BuildContext context) {
-///   final count = useState(0); // example with flutter_hooks
-///
-///   return Unnest()
-///       .padding(padding: const EdgeInsets.all(8))
-///       .text(count.value.toString());
-/// }
-/// ```
-///
-/// #### When the Last Widget Consumes a `child`
-/// ```dart
-/// Widget build(BuildContext context) => Unnest()
-///     .sizedBox( // SizedBox() has a "child" parameter
-///       width: 40,
-///       height: 40,
-///     )
-///     .end(); // .end() finishes the build when the last widget has a child parameter
-/// ```
-///
-/// #### Including Custom Widgets
-/// In your Unnest configuration file:
-/// ```dart
-/// import 'package:my_app/my_custom_widget.dart';
-/// // other widget imports...
-/// ```
-///
-/// In your other files:
-/// ```dart
-/// Widget build(BuildContext context) => Unnest()
-///     .center()
-///     .myCustomWidget(foo: bar)
-///     .someOtherCustomWidget();
-/// ```
-///
-/// #### Widgets With Named Constructors (e.g., `SizedBox.shrink()`)
-/// ```dart
-/// Widget build(BuildContext context) => Unnest()
-///     .someWidget()
-///     .sizedBox_shrink() // just use an underscore!
-///     .end();
-/// ```
-///
-/// See Unnested's README for more.
-library unnested;
-
 export 'src/macro.dart';
 
-// TODO delete rest of this file
+// FIXME delete rest of this file
+// ignore_for_file: avoid_private_typedef_functions
+// ignore_for_file: directives_ordering
+// ignore_for_file: require_trailing_commas
 
 // We will only depend on flutter/widgets.dart in actual macro:
 import 'package:flutter/material.dart';
