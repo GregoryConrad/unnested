@@ -70,7 +70,7 @@ packages:
       name: conventional_commit
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.0+1"
   convert:
     dependency: transitive
     description:
@@ -147,7 +147,7 @@ packages:
       name: melos
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   meta:
     dependency: transitive
     description:
