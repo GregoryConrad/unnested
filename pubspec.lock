@@ -147,7 +147,7 @@ packages:
       name: melos
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.1"
+    version: "3.1.0"
   meta:
     dependency: transitive
     description:
