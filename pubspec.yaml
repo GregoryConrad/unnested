@@ -6,4 +6,4 @@ environment:
 
 dev_dependencies:
   analyzer: ^5.13.0
-  melos: ^3.2.0
+  melos: ^3.3.0
