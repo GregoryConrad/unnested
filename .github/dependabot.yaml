@@ -2,14 +2,7 @@ version: 2
 enable-beta-ecosystems: true
 updates:
   - package-ecosystem: pub
-    directory: "/"
+    directories:
+      - "**/*"
     schedule:
-      interval: weekly
-  - package-ecosystem: pub
-    directory: "/packages/unnested"
-    schedule:
-      interval: weekly
-  - package-ecosystem: pub
-    directory: "/packages/unnested/example"
-    schedule:
-      interval: weekly
+      interval: "weekly"
