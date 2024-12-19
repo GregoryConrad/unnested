@@ -28,10 +28,9 @@ class MultiConstructorTestWidget extends _BaseTestWidget {
   }) : constructorUsed = ConstructorUsed.unnamed;
   const MultiConstructorTestWidget.namedWithNamedParameters(
     this.field0, {
+    required this.field3,
     this.field1,
     this.field2 = 2,
-    // ignore: always_put_required_named_parameters_first
-    required this.field3,
     super.key,
   })  : constructorUsed = ConstructorUsed.namedWithNamedParameters,
         child = null;
@@ -71,6 +70,7 @@ class MultiChildNameTestWidget extends _BaseTestWidget {
   })  : child = null,
         body = null;
 
-  // ignore: avoid_multiple_declarations_per_line
-  final Widget? child, body, content;
+  final Widget? child;
+  final Widget? body;
+  final Widget? content;
 }

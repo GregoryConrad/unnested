@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:unnested/unnested.dart';
 
+// NOTE: this is a trivial example
 // ignore_for_file: public_member_api_docs
-
-class Unnest extends UnmodifiableRecursiveBuilder {}
 
 void main() {
   runApp(
