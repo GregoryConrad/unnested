@@ -8,6 +8,7 @@ export 'src/macro.dart';
 // We will only depend on flutter/widgets.dart in actual macro:
 import 'package:flutter/material.dart';
 
+// NOTE: we need to support named constructors
 // ignore_for_file: camel_case_types
 // ignore_for_file: non_constant_identifier_names
 
@@ -120,3 +121,6 @@ class UnmodifiableRecursiveBuilder {
     return _widgetBuilder(child ?? const SizedBox.shrink());
   }
 }
+
+/// The entry point to make unnested [Widget] trees.
+final class Unnest extends UnmodifiableRecursiveBuilder {}

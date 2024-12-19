@@ -9,13 +9,13 @@
 </p>
 
 The easy way to unnest even the most complicated of widget trees,
-based on the power of macros in Dart 3.
+based on the power of the upcoming macros feature.
 
 ---
 
 # IMPORTANT
 This library is just a placeholder for now with some prototype code.
-Dart 3 and macros have not been released yet.
+Macros in Dart have not been released yet.
 
 Also, there are still a few in-code TODOs that need to be worked out.
 
@@ -46,9 +46,6 @@ import 'package:flutter/material.dart';
 @unnested
 import 'package:my_app/my_custom_widget.dart';
 // other Widget imports with @unnested...
-
-// The @unnested macros above will construct an Unnest class for you
-// that you can then import in your other UI files.
 ```
 
 ### Step 3: Use Unnested
@@ -68,12 +65,12 @@ Widget build(BuildContext context) => Unnest()
 
 #### Stateful Widgets
 ```dart
-// This example uses Unstate, a modern state management solution
-// built around Dart 3! After you're done here, go check it out!
-@unstateWidget
-Widget _countDisplay(@C(countCapsule) int count) => Unnest()
+// This example uses ReArch, a modern state management solution.
+// After you are done here, go check it out!
+@rearchWidget
+Widget _countDisplay(WidgetHandle use) => Unnest()
     .padding(padding: const EdgeInsets.all(8))
-    .text('$count'); // simply reference your state variables
+    .text('${use(countCapsule)}'); // simply reference your state variables
 ```
 
 #### Including Custom Widgets
@@ -119,7 +116,7 @@ Widget build(BuildContext context) => Unnest()
 ### Step 4: Going Beyond
 Here are some helpful hints to make working with Unnested easier.
 
-- Unnested plays very nicely with `Unstate` for state management, as they are sister projects
+- Unnested plays very nicely with `ReArch` for state management, as they are sister projects
 - Create a `widgets` Flutter package and use a monorepo tool like [Melos](https://melos.invertase.dev)
   - Helps split up your code in a logical way too!
 - When using Unnested to create stateless widgets, using the `=>` syntax

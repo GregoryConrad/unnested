@@ -2,8 +2,9 @@ name: unnested_workspace
 publish_to: none
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: '>=3.6.0 <4.0.0'
 
 dev_dependencies:
-  analyzer: ^5.13.0
-  melos: ^3.4.0
+  analyzer: ^7.1.0
+  melos: ^6.2.0
+  very_good_analysis: ^7.0.0

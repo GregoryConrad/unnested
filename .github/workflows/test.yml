@@ -1,4 +1,4 @@
-name: Test Code
+name: Build & Test
 
 on:
   pull_request:
@@ -19,8 +19,8 @@ jobs:
       - uses: bluefireteam/melos-action@v2
 
       - name: Check code format
-        run: melos run check-format --no-select
+        run: melos format --set-exit-if-changed
       - name: Run code analysis
-        run: melos run analyze --no-select
+        run: melos analyze --fatal-infos --fatal-warnings
       - name: Run tests
         run: melos run test
