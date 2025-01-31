@@ -14,10 +14,11 @@ based on the power of the upcoming macros feature.
 ---
 
 # IMPORTANT
-This library is just a placeholder for now with some prototype code.
-Macros in Dart have not been released yet.
+This library is now abandoned since
+[macros have been canceled](https://github.com/dart-lang/language/issues/1482#issuecomment-2622895490).
 
-Also, there are still a few in-code TODOs that need to be worked out.
+If you would like this package name on pub.dev,
+please email me at `contact at gsconrad dot com` so I can transfer ownership.
 
 ## Features
 - 📦 Unnests widget trees in an easy, declarative way
