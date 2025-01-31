@@ -1,3 +1,11 @@
+## 1.0.0-dev.5
+
+> Note: This release has breaking changes.
+
+ - **REFACTOR**: switch analysis to very_good_analysis.
+ - **FIX**: add proper support for melos v3.
+ - **BREAKING** **FEAT**: update to Dart3 and modernize code ([#13](https://github.com/GregoryConrad/unnested/issues/13)).
+
 ## 1.0.0-dev.4
 
  - **FIX**: fix code analysis.
